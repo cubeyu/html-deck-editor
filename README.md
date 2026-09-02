@@ -132,7 +132,9 @@ anchor-deck-mcp configure workbuddy --project "/完整/项目路径"
 用 Anchor Deck MCP 打开工作区，我要上传 HTML。
 ```
 
-也可以从终端手动打开：
+`open_workspace` 会把本地工作区链接返回给当前 AI 客户端。支持内置浏览器 / WebView 的 Agent App 应直接在应用内打开，不会再由 MCP 主动弹出 Safari、Chrome 等系统浏览器；不支持内置浏览器的客户端会显示本地链接作为备用入口。
+
+如果你明确希望从终端用系统默认浏览器打开，可以运行：
 
 ```bash
 anchor-deck-mcp serve --open

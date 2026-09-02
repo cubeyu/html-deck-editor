@@ -121,12 +121,12 @@ For the first use, follow this order:
 2. Fully quit and restart that AI client. Already-open windows, threads, or sessions usually do not hot-reload MCP tools.
 3. For Codex, test from a local workspace/project conversation. Any local folder is fine. Do not use a no-project, pure chat, or cloud-style empty conversation to judge whether local MCP is installed; those conversations may not load local MCP tools.
 4. In the AI client, say: `Use Anchor Deck MCP to open the workspace. I want to upload HTML.`
-5. MCP starts the local workspace and tries to open the browser automatically.
+5. MCP starts the local workspace and returns a link for the current Agent App's built-in browser or webview. It does not launch the system browser on its own.
 6. On first launch, you will see an upload guide page. The right-side import panel opens automatically.
 7. Import a ZIP or single HTML file. For a complete folder, use a ZIP or open its local path from the workspace panel.
 8. After upload, the workspace list keeps both the upload guide and your deck, so you can switch between them.
 
-If the browser does not pop up automatically, run `anchor-deck-mcp serve --open` in Terminal. Users of the fallback `.pkg` can also open `/Applications/Anchor Deck MCP.app` manually.
+If the client does not provide an embedded browser, use the returned local link. To explicitly open the workspace in the system browser, run `anchor-deck-mcp serve --open` in Terminal. Users of the fallback `.pkg` can also open `/Applications/Anchor Deck MCP.app` manually.
 
 Fallback installer configuration scripts:
 
